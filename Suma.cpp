@@ -12,11 +12,11 @@ int main (){
     mostrarMatrices();
     sumaMatriz();
     for(int i=0;i<numFil;i++){
-        delete[] puntero_matriz1[numFil];//Libera espacio de columnas
+        delete[] puntero_matriz1[i];//Libera espacio de columnas
     }
     delete[] puntero_matriz1;//Libera espacio de filas
     for(int i=0;i<numFil;i++){
-        delete[] puntero_matriz2[numFil];
+        delete[] puntero_matriz2[i];
     }
     delete[] puntero_matriz2;
     return 0;
