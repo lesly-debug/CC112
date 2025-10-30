@@ -12,7 +12,7 @@ int main (){
     mostrarMatrices();
     sumaMatriz();
     for(int i=0;i<numFil;i++){
-        delet[] puntero_matriz1[numFil];//Libera espacio de columnas
+        delete[] puntero_matriz1[numFil];//Libera espacio de columnas
     }
     delete[] puntero_matriz1;//Libera espacio de filas
     for(int i=0;i<numFil;i++){
