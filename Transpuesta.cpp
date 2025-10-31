@@ -36,7 +36,6 @@ void pedirDatos(){
             cin>>puntero_matriz[i][j];
         }
     }
-    cout<<"\n";
 }
 void mostrarMatriz(){
     cout<<"\nMostrando la matriz: "<<endl;
