@@ -7,6 +7,7 @@ struct alumno{
 }a[3];
 int main(){
     int posMax=0;
+    cout<<"===Registro de alumnos==="<<endl;
     for(int i=0;i<3;i++){
         cout<<"Nombre: ";
         cin.getline(a[i].nombre,30,'\n');
@@ -16,7 +17,7 @@ int main(){
         cin>>a[i].promedio;
         cin.ignore(); // limpia el salto de línea que dejó el último cin
     }
-    cout<<"\nMostrando datos"<<endl;
+    cout<<"\n===Mostrando datos==="<<endl;
     for(int i=0;i<3;i++){
         cout<<"Alumno "<<i+1<<endl;
         cout<<"Nombre: "<<a[i].nombre<<endl;
@@ -28,7 +29,7 @@ int main(){
             posMax=i;
         }
     }
-    cout<<"Datos del alumno "<<endl;
+    cout<<"===Alumno con mayor promedio==="<<endl;
     cout<<"Nombre: "<<a[posMax].nombre<<endl,
     cout<<"Edad: "<<a[posMax].edad<<endl;
     cout<<"Nota: "<<a[posMax].promedio<<endl;
