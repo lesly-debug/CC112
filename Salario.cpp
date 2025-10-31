@@ -27,12 +27,12 @@ int main(){
         cout<<"Salario: "<<emp[i].salario<<endl;
     }
     for(int i=0;i<numEmp;i++){
-        if(emp[i].salario>emp[salMayor].salario){
+        if(emp[i].salario>=emp[salMayor].salario){
             salMayor=i;
         }
     }
     for(int i=0;i<numEmp;i++){
-        if(emp[i].salario<emp[salMenor].salario){
+        if(emp[i].salario<=emp[salMenor].salario){
             salMenor=i;
         }
     }
