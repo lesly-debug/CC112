@@ -14,10 +14,12 @@ int main(){
     emp=new Empleado[numEmp];
     cout<<"===Registro de empleados==="<<endl;
     for(int i=0;i<numEmp;i++){
+        if(i==0){cin.ignore();}
         cout<<"Nombre: ";
-        cin>>emp[i].nombre;
+        cin.getline(emp[i].nombre,20,'\n');
         cout<<"Salario: ";
         cin>>emp[i].salario;
+        cin.ignore();
     }
     cout<<"\n===Mostrando datos==="<<endl;
     for(int i=0;i<numEmp;i++){
