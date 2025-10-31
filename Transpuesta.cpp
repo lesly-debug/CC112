@@ -19,6 +19,7 @@ int main(){
         delete[] intercambio[i];
     }
     delete[] intercambio;
+    return 0;
 }
 void pedirDatos(){
     cout<<"Digite el numero de filas: ";
