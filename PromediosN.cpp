@@ -51,5 +51,7 @@ int main(){
     cout<<"Edad: "<<pntr_alumno[posMax].edad<<endl;
     cout<<"Sexo: "<<pntr_alumno[posMax].sexo<<endl;
     cout<<"Promedio: "<<promedio[posMax]<<endl;
+    delete[] pntr_alumno;
+    delete[] promedio;
     return 0;
 }
