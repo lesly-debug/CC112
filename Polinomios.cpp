@@ -3,15 +3,17 @@ using namespace std;
 struct Termino{
     float coeficiente;
     int exponente;
-}p1[20],p2[20],p3[20];
+}p1[20],p2[20],p3[20],p4[40];
 int n1,n2;
 void pedirDatos();
 void mostrarPolinomios();
 void sumaPolinomios();
+void multiplicarPolinomios();
 int main(){
     pedirDatos();
     mostrarPolinomios();
     sumaPolinomios();
+    multiplicarPolinomios();
     return 0;
 }
 void pedirDatos(){
@@ -50,7 +52,7 @@ void mostrarPolinomios(){
     cout<<"\n";
 }
 void sumaPolinomios(){
-    cout<<"===SUMA==="<<endl;
+    cout<<"======MOSTRANDO SUMA======"<<endl;
     int k=0;
     for(int i=0;i<n1;i++){
         int j;
@@ -84,6 +86,35 @@ void sumaPolinomios(){
     for(int i=0;i<k;i++){
         cout<<p3[i].coeficiente<<"x^"<<p3[i].exponente;
         if(i!=(k-1)){
+            cout<<"+";
+        }
+    }
+}
+void multiplicarPolinomios(){
+    int k1=0;
+    cout<<"\n====MOSTRANDO PRODUCTO===="<<endl;
+    for(int i=0;i<n1;i++){
+        for(int j=0;j<n2;j++){
+            p4[k1].coeficiente=p1[i].coeficiente*p2[j].coeficiente;
+            p4[k1].exponente=p1[i].exponente+p2[j].exponente;
+            k1=k1+1;
+        }
+    }
+    for(int i=0;i<k1;i++){
+        for(int j=i+1;j<k1;j++){
+            if(p4[i].exponente==p4[j].exponente){
+                p4[i].coeficiente=p4[i].coeficiente+p4[j].coeficiente;
+                for(int k=j;k<(k1-1);k++){
+                p4[k]=p4[k+1];
+            }
+            k1=k1-1;
+            j=j-1;
+        }
+    }
+}
+    for(int i=0;i<k1;i++){
+        cout<<p4[i].coeficiente<<"x^"<<p4[i].exponente;
+        if(i!=(k1-1)){
             cout<<"+";
         }
     }
