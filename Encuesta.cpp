@@ -25,6 +25,8 @@ int main(){
     for(int i=0;i<modita;i++){
         cout<<moda[i]<<" ";
     }
+    destruirArreglo(valor);
+    destruirArreglo(moda);
     return 0;
 }
 int* crearArreglo(int n){
@@ -127,6 +129,10 @@ int* calcularModa(int* rpta,int n,int& numModas){
        moda[indice]=5;
     }
     return moda;
+}
+void destruirArreglo(int*& rpta){
+    delete[] rpta;
+    rpta=nullptr;
 }
 //int calcularModa(int* rpta,int n){
     //int c1=0,c2=0,c3=0,c4=0,c5=0;
