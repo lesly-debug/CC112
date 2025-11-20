@@ -15,7 +15,8 @@ void escribir(){
     //o->(de) ouput Si existe se reemplaza y si no existe se crea un archivo
     ofstream archivo;
     //nombre o ubicacion, modo de optimizar (parametros)
-    archivo.open("prueba.txt",ios::out)//abriendo el archivo
+    //ubicacion ejemplo d://prueba//ejemplo.txt, el nombre es ejemplo.txt, prueba es la carpeta, d es el disco
+    archivo.open("prueba.txt",ios::out);//abriendo el archivo
     if(archivo.fail()){
         cout<<"No se pudo abrir el archivo";
         exit(1);//sirve para salir del programa, se necesita libreria stdlib.h
