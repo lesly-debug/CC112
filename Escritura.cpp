@@ -10,6 +10,7 @@ using namespace std;
 void escribir();
 int main(){
     escribir();
+    return 0;
 }
 void escribir(){
     //o->(de) ouput Si existe se reemplaza y si no existe se crea un archivo
