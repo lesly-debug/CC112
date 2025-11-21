@@ -5,11 +5,13 @@
 using namespace std;
 void lectura();
 int main(){
+    lectura();
     return 0;
 }
 void lectura(){
     //i->inpout (lectura)
     ifstream archivo;
+    string texto;
     //nombre o ubicacion, d:\\carpeta\\nombre del txt
     archivo.open("Programacion.txt",ios::in);//Abriendo el archivo en modo lectura
     if(archivo.fail()){
