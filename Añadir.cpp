@@ -15,6 +15,6 @@ void aniadir(){
         cout<<"Error al abrir el archivo";
         exit(1);
     }
-    archivo<<"23:43 20/11/2025";
+    archivo<<"23:43 20/11/2025"<<endl;
     archivo.close();
 }
