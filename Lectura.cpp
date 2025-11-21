@@ -19,6 +19,8 @@ void lectura(){
         exit(1);
     }
     //funcion eof recorre todo el archivo
+
+    //archivo en el código está abierto con ios::in (modo lectura). Esto significa que no puedes escribir en él, solo leer. getline(cin,texto) archivo<<texto es incorrecto
     while(!archivo.eof()){//mientras no sea el final del archivo
         getline(archivo,texto);//copiando todo lo de archivo en texto
         cout<<texto<<endl;
