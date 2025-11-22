@@ -23,7 +23,7 @@ int main(){
         cout<<"Saldo: ";
         cin>>u[i].saldo;
     }
-    fstream archivo("usuario.dat",ios::binary|ios::out|ios::app);
+    fstream archivo("usuario.dat",ios::binary|ios::out);
     if(archivo.fail()){
         cout<<"Error al abrir el archivo";
         exit(1);
@@ -51,7 +51,7 @@ int main(){
             encontrado=true;
         }
     }
-    if(encontrado)){
+    if(encontrado){
         cout<<"Incremento del saldo: ";
         cin>>aumSaldo;
         u[pos].saldo=u[pos].saldo+aumSaldo;
@@ -60,11 +60,12 @@ int main(){
         for(int i=0;i<num;i++){
             cout<<"Codigo:      "<<u[i].codigo<<"       |    Nombre:       "<<u[i].nombre<<"  |     Saldo:          "<<u[i].saldo<<endl;
         }
-        archivo.open("usuarios.dat"<ios::binary|ios::app|ios::out);
-        archivo.write((char*)&u[pos],sizeof(Usuario));
-        cout<<"\nUsuario modificado agregado al final del archivo.\n";
+        archivo.open("usuario.dat",ios::binary|ios::out);
+        for(int i=0;i<num;i++){
+            archivo.write((char*)&u[i],sizeof(Usuario));
+        }
     }else{
-        cout<<"Codigo no registrado, no hay cambios en el contenido del archivo";
+        cout<<"El codigo "<<cod<<" no existe";
     }
     archivo.close();
     delete[] u;
