@@ -61,9 +61,8 @@ int main(){
             cout<<"Codigo:      "<<u[i].codigo<<"       |    Nombre:       "<<u[i].nombre<<"  |     Saldo:          "<<u[i].saldo<<endl;
         }
         archivo.open("usuarios.dat"<ios::binary|ios::app|ios::out);
-        for(int i=0;i<num;i++){
-            archivo.write((char*)&u[i],sizeof(Usuario));
-        }
+        archivo.write((char*)&u[pos],sizeof(Usuario));
+        cout<<"\nUsuario modificado agregado al final del archivo.\n";
     }else{
         cout<<"Codigo no registrado, no hay cambios en el contenido del archivo";
     }
