@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <fstream>
 using namespace std;
+//Autor: Lesly Baltazar
 struct Vertice{
     double x;
     double y;
