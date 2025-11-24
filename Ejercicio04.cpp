@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+//Autor Lesly Baltazar
 struct Termino{
     float coeficiente;
     int exponente;
