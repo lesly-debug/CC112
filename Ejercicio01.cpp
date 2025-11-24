@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <ctime>
 using namespace std;
+//Autor Lesly Baltazar
 struct TFECHA{
     int dia;
     int mes;
@@ -45,4 +46,5 @@ int main(){
     for(int i=0;i<numDias;i++){
         cout<<listado[i].fecha->dia<<" / "<<listado[i].fecha->mes<<" : "<<listado[i].numPasajeros<<endl;
     }
+    delete[] listado;
 }
