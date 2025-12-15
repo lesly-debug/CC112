@@ -86,7 +86,7 @@ void procesarLogs() {
     ifstream archivo_in(ARCHIVO_ENTRADA);
 
     if (!archivo_in.is_open()) {
-        cerr<<"Error: No se pudo abrir el archivo de log '" << ARCHIVO_ENTRADA << "'. Asegúrese de que existe." << endl;
+        cerr<<"Error: No se pudo abrir el archivo de log '" << ARCHIVO_ENTRADA << "'. Asegurese de que existe." << endl;
         return;
     }
 
@@ -208,4 +208,8 @@ void procesarLogs() {
     
     liberarStats(stats_usuarios,num_usuarios);
     delete[] nombres_usuarios;
+}
+int main(){
+    procesarLogs();
+    return 0;
 }
